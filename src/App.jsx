@@ -1,17 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import SearchBar from "./components/SearchBar";
-
-
+import React from 'react';
+import Header from './components/Header';
+import './App.css';
 
 function App() {
-    
   return (
-    <div>
-      <SearchBar />
+    <div className="App">
+      <Header />
+      {}
     </div>
-
   );
-};
+}
 
 export default App;
