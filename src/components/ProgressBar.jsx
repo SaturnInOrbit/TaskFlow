@@ -1,25 +1,35 @@
 import React from "react";
-import "./ProgressBar.css";
+import { useTask } from "../hook/useTask.js";
+import "../styles/ProgressBar.css";
 
-const ProgressBar = ({ completed, total }) => {
-  const percentage = Math.round((completed / total) * 100);
+function ProgressBar() {
+  const { progress } = useTask();
+
+  const percent = progress.toFixed(0);
 
   return (
-    <div className="progress-container">
-      <div className="progress-label">
-        Today’s Progress: {percentage}% Complete
-      </div>
-      <div className="progress-bar">
-        <div
-          className="progress-fill"
-          style={{ width: `${percentage}%` }}
-        ></div>
-      </div>
-      <div className="progress-info">
-        {completed} of {total} tasks complete
+    <div className="progress-main box">
+      <div className="progress-wrapper">
+        <div className="progress-header">
+          <h2>Today's Progress</h2>
+          <div className="progress-stat-circle">
+            <span>{percent}% Done</span>
+            <span
+              className="progress-circle"
+              style={{ "--progress": `${progress}%` }}
+            ></span>
+          </div>
+        </div>
+        <div className="progress-stat-bar">
+          <span>{percent}% Complete</span>
+          <span
+            className="progress-bar"
+            style={{ width: `${progress}%` }}
+          ></span>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default ProgressBar;

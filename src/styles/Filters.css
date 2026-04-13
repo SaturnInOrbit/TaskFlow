@@ -1,0 +1,24 @@
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-group button {
+    display: flex;
+    width: 201.241px;
+    height: 43.377px;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid #480303;
+    background: #E5D1B9;
+    font-weight: 600;
+    transition: background 0.1s ease-in-out;
+}
+
+.filter-group button:focus {
+    background: #BA835D;
+}

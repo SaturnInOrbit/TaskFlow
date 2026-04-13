@@ -1,20 +1,25 @@
-import { useState } from 'react'
-import './App.css'
-import SearchBar from "./components/SearchBar";
-import Filters from "./components/Filters";
-import ProgressBar from "./ProgressBar";
-
-
+import "./App.css";
+import { TaskProvider } from "./context/TaskContext";
+import Header from "./components/Header";
+import TaskForm from "./components/TaskForm";
+import ProgressBar from "./components/ProgressBar";
+import NextTask from "./components/NextTask";
+import TaskBoard from "./components/TaskBoard";
 
 function App() {
-    
   return (
-    <div>
-      <SearchBar />
-      <Filters />
-    </div>
-
+    <TaskProvider>
+      <main>
+        <Header />
+        <TaskForm />
+        <div className="progress-boxes">
+          <ProgressBar />
+          <NextTask />
+        </div>
+        <TaskBoard />
+      </main>
+    </TaskProvider>
   );
-};
+}
 
 export default App;

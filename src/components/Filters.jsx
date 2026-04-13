@@ -1,30 +1,25 @@
-import "./Filters.css";
+import React from "react";
+import "../styles/Filters.css";
 
-function Filters() {
-
-  const handleAllTasks = () => {
-    // logic for all tasks
-  };
-
-  const handleCompleted = () => {
-    // logic for completed tasks
-  };
-
-  const handleOverdue = () => {
-    // logic for overdue tasks
-  };
-
+function Filters({ activeFilter, onFilterChange }) {
   return (
-    <div className="task-tabs">
-      <button className="tab-btn" onClick={handleAllTasks}>
-        ALL TASKS
+    <div className="filter-group">
+      <button
+        className={`all-task ${activeFilter === "all" ? "active" : ""}`}
+        onClick={() => onFilterChange("all")}
+      >
+        ALL TASK
       </button>
-
-      <button className="tab-btn" onClick={handleCompleted}>
+      <button
+        className={`completed ${activeFilter === "done" ? "active" : ""}`}
+        onClick={() => onFilterChange("done")}
+      >
         COMPLETED
       </button>
-
-      <button className="tab-btn" onClick={handleOverdue}>
+      <button
+        className={`overdue ${activeFilter === "overdue" ? "active" : ""}`}
+        onClick={() => onFilterChange("overdue")}
+      >
         OVERDUE
       </button>
     </div>
