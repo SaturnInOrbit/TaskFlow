@@ -1,11 +1,13 @@
-import Header from './components/Header';
-import TaskForm from './components/TaskForm';
+import { useState } from 'react'
+import './App.css'
+import SearchBar from "./components/SearchBar";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <TaskForm />
+    <div>
+      <SearchBar />
     </div>
   );
 }
