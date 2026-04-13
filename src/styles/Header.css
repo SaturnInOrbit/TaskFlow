@@ -1,0 +1,30 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.logo-icon {
+  height: 50px;
+  width: auto;
+  margin-right: -15px;
+}
+
+.brand-name {
+  font-family: 'Juno Black', Consolas, sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -1.5px;
+  margin: 0;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-brown {
+  color: #BA835D;
+}
